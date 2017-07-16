@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.mks.uuprojectone.Activity.Activity_student_signup">
+
+
+
+    <EditText
+        android:id="@+id/etNameSt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Name"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="31dp" />
+    <EditText
+        android:id="@+id/etEmailSt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Email"
+        android:layout_below="@+id/etNameSt"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:inputType="textEmailAddress"/>
+    <EditText
+        android:id="@+id/etPasswordSt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="password"
+        android:layout_below="@+id/etEmailSt"
+        android:inputType="textPassword"
+        />
+    <EditText
+        android:id="@+id/etDepartmentSt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Department"
+        android:layout_below="@+id/etPasswordSt"/>
+    <EditText
+        android:id="@+id/etBatch"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Batch"
+        android:layout_below="@+id/etDepartmentSt"/>
+    <EditText
+        android:id="@+id/etSection"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Section"
+        android:layout_below="@+id/etBatch"/>
+    <EditText
+        android:id="@+id/etSid"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Id"
+        android:layout_below="@+id/etSection"/>
+    <EditText
+        android:id="@+id/etContactNoSt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Contact NO"
+        android:layout_below="@+id/etSid"/>
+    <EditText
+        android:id="@+id/etParentNo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Parent contact NO"
+        android:layout_below="@+id/etContactNoSt"/>
+    <Button
+        android:id="@+id/btSignupSt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Sign Up"
+        android:layout_below="@+id/etParentNo"/>
+
+
+</RelativeLayout>
