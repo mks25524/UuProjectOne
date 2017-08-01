@@ -1,6 +1,7 @@
 package com.example.mks.uuprojectone.Activity;
 
 import android.app.ProgressDialog;
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -12,6 +13,9 @@ import com.example.mks.uuprojectone.Api.APIService;
 import com.example.mks.uuprojectone.Api.APIUrl;
 import com.example.mks.uuprojectone.Model.Student;
 import com.example.mks.uuprojectone.R;
+import com.example.mks.uuprojectone.helper.SharePrefManager;
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
 
 import javax.xml.transform.Result;
 
@@ -60,17 +64,19 @@ public class Activity_student_signup extends AppCompatActivity implements View.O
         String contactNo=etContactNo.getText().toString().trim();
         String parentNO=etParentNO.getText().toString().trim();
 
+
         //building retrofit object
         Retrofit retrofit=new Retrofit.Builder()
                 .baseUrl(APIUrl.BASE_URL)
-                .addConverterFactory(GsonConverterFactory.create())
+
+                .addConverterFactory(GsonConverterFactory.create(  ))
                 .build();
         //defining retrofit api service
         APIService service=retrofit.create(APIService.class);
         //Defining the user object as we need to pass it with the call
         Student student=new Student(name,email,password,department,batch,section,sid,contactNo,parentNO);
         //definging the call
-        Call<Result>call=service.createStudent(
+        Call<com.example.mks.uuprojectone.Model.Result>call=service.createStudent(
                 student.getName(),
                 student.getEmail(),
                 student.getStpasword(),
@@ -82,22 +88,26 @@ public class Activity_student_signup extends AppCompatActivity implements View.O
                 student.getParentno()
         );
         //calling the api
-        call.enqueue(new Callback<Result>() {
+        call.enqueue(new Callback<com.example.mks.uuprojectone.Model.Result>() {
             @Override
-            public void onResponse(Call<Result> call, Response<Result> response) {
+            public void onResponse(Call<com.example.mks.uuprojectone.Model.Result> call, Response<com.example.mks.uuprojectone.Model.Result> response) {
                 //hiding the progress dialog
                 progressDialog.dismiss();
                 //displaying the message from the response as toast
              Toast.makeText(getApplicationContext(),response.message(),Toast.LENGTH_LONG).show();
 
-
-                //if there is no error
-               // if(!response.body().)
+//             Toast.makeText(getApplicationContext(), response.body().getMessage(), Toast.LENGTH_LONG).show();
+                if (!response.body().getError()) {
+                    //starting profile activity
+                    finish();
+                    SharePrefManager.getmInstance(getApplicationContext()).studentLogin(response.body().getStudent());
+                    startActivity(new Intent(getApplicationContext(), Student_Profile_Activity.class));
+                }
             }
 
 
             @Override
-            public void onFailure(Call<Result> call, Throwable t) {
+            public void onFailure(Call<com.example.mks.uuprojectone.Model.Result> call, Throwable t) {
                 progressDialog.dismiss();
                 Toast.makeText(getApplicationContext(),t.getMessage(),Toast.LENGTH_LONG).show();
 

@@ -20,7 +20,7 @@
         android:id="@+id/etPassword"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Email"
+        android:text="pass"
         android:inputType="textPassword"
         android:layout_below="@+id/etEmail"
         android:layout_alignParentLeft="true"

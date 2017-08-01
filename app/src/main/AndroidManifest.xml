@@ -23,11 +23,17 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".LoginActivity"
+            android:name=".Activity.Login_Activity"
             android:label="@string/title_activity_login" />
-        <activity android:name=".Activity.Login_Activity" />
+        <!-- <activity android:name=".Activity.Login_Activity" /> -->
         <activity android:name=".Activity.Activity_Tlogin" />
-        <activity android:name=".Activity.Activity_student_signup"></activity>
+        <activity android:name=".Activity.Activity_student_signup" />
+        <activity android:name=".Activity.Activity_Teacher_Signup" />
+        <activity android:name=".Activity.Student_Profile_Activity" />
+        <activity android:name=".Activity.Teacher_Profile_Activity" />
+        <activity android:name=".Activity.GetAttendance_Activity" />
+        <activity android:name=".Activity.Code_Matching_Activity" />
+        <activity android:name=".Activity.AttendanceMark_Activity"></activity>
     </application>
 
 </manifest>

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.mks.uuprojectone.Activity.AttendanceMark_Activity">
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="date"
+        android:id="@+id/etDAteAtt"
+        android:inputType="date"/>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="depertment"
+        android:id="@+id/etDeptAtt"
+        android:layout_below="@+id/etDAteAtt"/>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="batch"
+        android:id="@+id/etBatchAtt"
+        android:layout_below="@+id/etDeptAtt"/>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="section"
+        android:id="@+id/etSectAtt"
+        android:layout_below="@+id/etBatchAtt"/>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="sid"
+        android:id="@+id/etSidAtt"
+        android:layout_below="@+id/etSectAtt"/>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="subject code:"
+        android:id="@+id/etSubCodeAtt"
+        android:layout_below="@+id/etSidAtt"/>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Marked"
+        android:id="@+id/etMarkAtt"
+        android:layout_below="@+id/etSubCodeAtt"/>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/btMarked"
+        android:text="Submit"
+        android:layout_below="@+id/etMarkAtt"/>
+
+</RelativeLayout>

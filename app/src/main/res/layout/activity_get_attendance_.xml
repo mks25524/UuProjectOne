@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.mks.uuprojectone.Activity.GetAttendance_Activity">
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/datePickerSecurity"
+        android:inputType="date"
+        android:hint="dd/mm/yy">
+
+    </EditText>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="seciurity code"
+        android:id="@+id/etSeciurityCodeTeacher"
+        android:layout_below="@+id/datePickerSecurity"/>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="department"
+        android:id="@+id/etDepartmentSeciurityTeacher"
+        android:layout_below="@+id/etSeciurityCodeTeacher"/>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="batch"
+        android:id="@+id/etBatchSeciurityTeacher"
+        android:layout_below="@+id/etDepartmentSeciurityTeacher"/>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="section"
+        android:id="@+id/etSectionSeciurityTeacher"
+        android:layout_below="@+id/etBatchSeciurityTeacher"/>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="subject code"
+        android:id="@+id/etSubjectCodeTeacher"
+        android:layout_below="@+id/etSectionSeciurityTeacher"/>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Start"
+        android:id="@+id/btStartAteendence"
+        android:layout_below="@+id/etSubjectCodeTeacher"/>
+
+</RelativeLayout>

@@ -5,5 +5,5 @@ package com.example.mks.uuprojectone.Api;
  */
 
 public class APIUrl {
-    public static final String BASE_URL="http://192.168.0.105/UuProjectOne/public/";
+    public static final String BASE_URL="http://192.168.0.103/UuProjectOne/public/";
 }

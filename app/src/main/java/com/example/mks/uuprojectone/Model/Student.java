@@ -16,10 +16,27 @@ public class Student {
     private String contactno;
     private String parentno;
 
+    public Student(String email, String stpasword) {
+        this.email = email;
+        this.stpasword = stpasword;
+    }
+
     public Student(String name, String email, String stpasword, String department, String batch, String section, String sid, String contactno, String parentno) {
         this.name = name;
         this.email = email;
         this.stpasword = stpasword;
+        this.department = department;
+        this.batch = batch;
+        this.section = section;
+        this.sid = sid;
+        this.contactno = contactno;
+        this.parentno = parentno;
+    }
+
+    public Student(int id, String name, String email, String department, String batch, String section, String sid, String contactno, String parentno) {
+        this.id = id;
+        this.name = name;
+        this.email = email;
         this.department = department;
         this.batch = batch;
         this.section = section;

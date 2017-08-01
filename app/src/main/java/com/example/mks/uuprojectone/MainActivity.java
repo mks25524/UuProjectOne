@@ -6,9 +6,12 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+import com.example.mks.uuprojectone.Activity.Activity_Teacher_Signup;
+import com.example.mks.uuprojectone.Activity.Activity_Tlogin;
+import com.example.mks.uuprojectone.Activity.Activity_student_signup;
 import com.example.mks.uuprojectone.Activity.Login_Activity;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
     Button btTeacher,btStudent;
 
@@ -19,21 +22,20 @@ public class MainActivity extends AppCompatActivity {
         btStudent= (Button) findViewById(R.id.btStudent);
         btTeacher= (Button) findViewById(R.id.btTeacher);
 
-        btStudent.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent=new Intent(getApplicationContext(), Login_Activity.class);
-                startActivity(intent);
-                setContentView(R.layout. activity_login_);
-            }
-        });
-        btTeacher.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent=new Intent(getApplicationContext(), Login_Activity.class);
-                startActivity(intent);
-                setContentView(R.layout. activity_login_);
-            }
-        });
+        btStudent.setOnClickListener(this);
+        btTeacher.setOnClickListener(this);
+
+    }
+
+    @Override
+    public void onClick(View v) {
+
+        if(v==btStudent)
+        {
+            startActivity(new Intent(this, Login_Activity.class));
+        }else if(v==btTeacher)
+        {
+            startActivity(new Intent(this, Activity_Tlogin.class));
+        }
     }
 }

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.mks.uuprojectone.Activity.Code_Matching_Activity">
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/datePickerSecurityMatch"
+        android:inputType="date"
+        android:hint="dd/mm/yy">
+
+    </EditText>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="seciurity code"
+        android:id="@+id/etSeciurityCodeStudentMatch"
+        android:layout_below="@+id/datePickerSecurityMatch"/>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="department"
+        android:id="@+id/etDepartmentSeciurityStudentMatch"
+        android:layout_below="@+id/etSeciurityCodeStudentMatch"/>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="batch"
+        android:id="@+id/etBatchSeciurityMatch"
+        android:layout_below="@+id/etDepartmentSeciurityStudentMatch"/>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="section"
+        android:id="@+id/etSectionSeciurityMatch"
+        android:layout_below="@+id/etBatchSeciurityMatch"/>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="subject code"
+        android:id="@+id/etSubjectCodeMatch"
+        android:layout_below="@+id/etSectionSeciurityMatch"/>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/btMatch"
+        android:text="match"
+        android:layout_below="@+id/etSubjectCodeMatch"/>
+
+
+</RelativeLayout>
